@@ -6,7 +6,11 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs">docs</a> will be your guide.</p>
+<ion-content class="card-background-page" padding>
+  
+    <ion-card *ngFor="let image of images" (click)="salvar(image)">
+      <img [src]="image.url"/>
+      <div class="card-title">{{ image.nome }}</div>
+    </ion-card>
+
 </ion-content>
